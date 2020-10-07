@@ -1078,26 +1078,6 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2164751144978321455, guid: 09a872cf2864fd34ba2cded056eef470,
-        type: 3}
-      propertyPath: specialAbility.duration
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2164751144978321455, guid: 09a872cf2864fd34ba2cded056eef470,
-        type: 3}
-      propertyPath: specialAbility.cooldown
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2164751144978321455, guid: 09a872cf2864fd34ba2cded056eef470,
-        type: 3}
-      propertyPath: specialAbility.power
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2164751144978321455, guid: 09a872cf2864fd34ba2cded056eef470,
-        type: 3}
-      propertyPath: specialAbility.type
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09a872cf2864fd34ba2cded056eef470, type: 3}
 --- !u!1001 &5109120572573003561
@@ -1122,17 +1102,6 @@ PrefabInstance:
       propertyPath: txtIntro
       value: 
       objectReference: {fileID: 522567700}
-    - target: {fileID: 3107296770092261837, guid: 9b8169a687fb7624592432573663d847,
-        type: 3}
-      propertyPath: levelName
-      value: Level1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3107296770092261837, guid: 9b8169a687fb7624592432573663d847,
-        type: 3}
-      propertyPath: intro
-      value: Welcome! Clear the level by pushing all the orange obstables off the
-        arena.
-      objectReference: {fileID: 0}
     - target: {fileID: 3107296770092261837, guid: 9b8169a687fb7624592432573663d847,
         type: 3}
       propertyPath: canvas

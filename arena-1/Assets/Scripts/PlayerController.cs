@@ -21,12 +21,11 @@ namespace NoSuchStudio.ExtendingEditor {
     [DisallowMultipleComponent]
     public class PlayerController : MonoBehaviour {
         [Header("General")]
-        [SerializeField] private float mass;
-        [SerializeField] private float speed;
-        [SerializeField] private float size;
+        [SerializeField, Range(0.5f, 5f)] private float mass;
+        [SerializeField, Range(1f, 20f)] private float speed;
+        [SerializeField, Range(0.5f, 3f)] private float size;
         [Space(10)]
         [SerializeField] private SpecialAbility specialAbility;
-
         [Header("Visual")]
         [Tooltip("Color field takes effect at runtime")]
         [SerializeField] private Color color;

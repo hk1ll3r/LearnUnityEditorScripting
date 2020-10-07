@@ -52,10 +52,10 @@ MonoBehaviour:
   speed: 10
   size: 2
   specialAbility:
-    type: 0
-    duration: 0
-    cooldown: 0
-    power: 0
+    type: 1
+    duration: 0.5
+    cooldown: 3
+    power: 2
   color: {r: 0.58541864, g: 1, b: 0.2783019, a: 1}
   texture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!114 &5940459637874215366
