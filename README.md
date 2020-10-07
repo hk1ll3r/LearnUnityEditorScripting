@@ -1,6 +1,5 @@
 # UnityEditorScriptingTutorial
-This is the acompanying repository for my series on Unity Editor Scripting. You can find the articles here:
-https://medium.com/@nosuchstudio/learn-unity-editor-scripting-overview-part-0-1da6fe2552ba
+This is the acompanying repository for my series on Unity Editor Scripting. You can find the articles down below.
 
 In the series, I work with a base project and add additional Editor functionality to it. The folders are the snapshots of the project after each article.
 
