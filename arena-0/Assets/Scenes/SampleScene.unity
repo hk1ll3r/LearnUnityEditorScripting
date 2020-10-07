@@ -1065,41 +1065,6 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2164751144978321455, guid: 09a872cf2864fd34ba2cded056eef470,
-        type: 3}
-      propertyPath: color.r
-      value: 0.5974504
-      objectReference: {fileID: 0}
-    - target: {fileID: 2164751144978321455, guid: 09a872cf2864fd34ba2cded056eef470,
-        type: 3}
-      propertyPath: color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2164751144978321455, guid: 09a872cf2864fd34ba2cded056eef470,
-        type: 3}
-      propertyPath: color.b
-      value: 0.2028302
-      objectReference: {fileID: 0}
-    - target: {fileID: 2164751144978321455, guid: 09a872cf2864fd34ba2cded056eef470,
-        type: 3}
-      propertyPath: color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2164751144978321455, guid: 09a872cf2864fd34ba2cded056eef470,
-        type: 3}
-      propertyPath: texture
-      value: 
-      objectReference: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 2164751144978321455, guid: 09a872cf2864fd34ba2cded056eef470,
-        type: 3}
-      propertyPath: mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2164751144978321455, guid: 09a872cf2864fd34ba2cded056eef470,
-        type: 3}
-      propertyPath: size
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09a872cf2864fd34ba2cded056eef470, type: 3}
 --- !u!1001 &3665021707491358652
@@ -1164,6 +1129,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3006498410034681214, guid: 428c2e0f48d02914893f6ac72eeddad2,
+        type: 3}
+      propertyPath: txtScore
+      value: 
+      objectReference: {fileID: 2037207129}
+    - target: {fileID: 3006498410034681214, guid: 428c2e0f48d02914893f6ac72eeddad2,
+        type: 3}
+      propertyPath: txtLevelName
+      value: 
+      objectReference: {fileID: 1079103010}
+    - target: {fileID: 3006498410034681214, guid: 428c2e0f48d02914893f6ac72eeddad2,
+        type: 3}
+      propertyPath: txtIntro
+      value: 
+      objectReference: {fileID: 1804861187}
     - target: {fileID: 4718517600951772651, guid: 428c2e0f48d02914893f6ac72eeddad2,
         type: 3}
       propertyPath: m_Name
