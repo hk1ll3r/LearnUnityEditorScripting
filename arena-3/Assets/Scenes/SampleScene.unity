@@ -335,6 +335,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7803592923039197743, guid: 160d3de4963d0bd4188f4045bdb83ae9,
+        type: 3}
+      propertyPath: score
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 160d3de4963d0bd4188f4045bdb83ae9, type: 3}
 --- !u!1 &446132290
@@ -1025,7 +1030,7 @@ PrefabInstance:
     - target: {fileID: 7803592923039197731, guid: 160d3de4963d0bd4188f4045bdb83ae9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.92
+      value: 2.93
       objectReference: {fileID: 0}
     - target: {fileID: 7803592923039197731, guid: 160d3de4963d0bd4188f4045bdb83ae9,
         type: 3}
@@ -1071,6 +1076,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803592923039197743, guid: 160d3de4963d0bd4188f4045bdb83ae9,
+        type: 3}
+      propertyPath: score
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 160d3de4963d0bd4188f4045bdb83ae9, type: 3}
@@ -1387,6 +1397,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2164751144978321452, guid: 09a872cf2864fd34ba2cded056eef470,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2164751144978321453, guid: 09a872cf2864fd34ba2cded056eef470,
         type: 3}
       propertyPath: m_Mass
@@ -1503,6 +1518,11 @@ PrefabInstance:
     - target: {fileID: 6167231396866964886, guid: 0350037a6882737409c12c8b35f186a9,
         type: 3}
       propertyPath: m_Name
+      value: Arena
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167231396866964886, guid: 0350037a6882737409c12c8b35f186a9,
+        type: 3}
+      propertyPath: m_TagString
       value: Arena
       objectReference: {fileID: 0}
     - target: {fileID: 6167231396866964890, guid: 0350037a6882737409c12c8b35f186a9,

@@ -1,13 +1,20 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Text;
 
 namespace NoSuchStudio.ExtendingEditor {
 
     public class GameManager : MonoBehaviour {
 
         [SerializeField] int score;
-        [SerializeField] string levelName;
+        [SerializeField, HideInInspector] string levelName;
+        public string LevelName {
+            get { return levelName; }
+            set { 
+                levelName = value;
+            }
+        }
         [SerializeField, TextArea(2,4)] string intro;
 
         [SerializeField] Text txtScore;
@@ -40,6 +47,37 @@ namespace NoSuchStudio.ExtendingEditor {
                 PlayerController pc = playerObj.GetComponent<PlayerController>();
                 sliderCooldown.value = Mathf.Clamp01((Time.time - pc.LastAbilityTime) / pc.SpecialAbility.cooldown);
             }
+        }
+
+        public string Validate() {
+            StringBuilder sb = new StringBuilder();
+            if (txtScore == null) {
+                sb.AppendLine("score text not set.");
+            }
+            if (txtLevelName == null) {
+                sb.AppendLine("level name text not set.");
+            }
+            if (txtIntro == null) {
+                sb.AppendLine("intro text not set.");
+            }
+            if (sliderCooldown == null) {
+                sb.AppendLine("cooldown slider not set.");
+            }
+            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+            GameObject arenaObj = GameObject.FindGameObjectWithTag("Arena");
+            PlayerController pc = playerObj?.GetComponent<PlayerController>();
+            if (playerObj == null) {
+                sb.AppendLine("scene has no player object.");
+            } else {
+                if (pc == null) {
+                    sb.AppendLine("player object has no PlayerController component.");
+                }
+            }
+            if (arenaObj == null) {
+                sb.AppendLine("scene has no arena object.");
+            }
+
+            return sb.ToString();
         }
     }
 }

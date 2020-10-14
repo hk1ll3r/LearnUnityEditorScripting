@@ -5,11 +5,14 @@ namespace NoSuchStudio.ExtendingEditor {
     
     public class TargetController : MonoBehaviour {
         public static int enemies;
+
+        [SerializeField] int score;
+
         private void Die() {
             // TODO die animation
             GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
             if (playerObj) {
-                playerObj.GetComponent<PlayerInfo>().AddScore(100);
+                playerObj.GetComponent<PlayerInfo>().AddScore(score);
             }
             Destroy(gameObject);
         }
