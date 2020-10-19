@@ -6,9 +6,10 @@ namespace NoSuchStudio.ExtendingEditor {
     public class TargetController : MonoBehaviour {
         public static int enemies;
 
-        public int score;
+        [SerializeField] int score;
 
         private void Die() {
+            // TODO die animation
             GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
             if (playerObj) {
                 playerObj.GetComponent<PlayerInfo>().AddScore(score);

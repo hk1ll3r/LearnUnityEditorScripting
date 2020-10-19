@@ -20,6 +20,10 @@ namespace NoSuchStudio.ExtendingEditor {
             startTime = Time.time;
         }
 
+        public void SetScore(int score) {
+            txtScore.text = $"Score: {score}";
+        }
+
         private void Update() {
             if (Time.time - startTime > 3f && txtIntro.gameObject.activeSelf) txtIntro.gameObject.SetActive(false);
             GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
