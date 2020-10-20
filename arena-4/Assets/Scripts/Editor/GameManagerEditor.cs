@@ -1,8 +1,6 @@
 ﻿using System.Linq;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
 namespace NoSuchStudio.ExtendingEditor.Editor {
     [CustomEditor(typeof(GameManager))]

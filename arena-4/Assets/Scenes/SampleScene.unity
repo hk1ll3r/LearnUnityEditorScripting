@@ -1446,6 +1446,11 @@ PrefabInstance:
       propertyPath: sliderCooldown
       value: 
       objectReference: {fileID: 469798563}
+    - target: {fileID: 3107296770092261837, guid: 9b8169a687fb7624592432573663d847,
+        type: 3}
+      propertyPath: levelName
+      value: Level 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5624509792603903149, guid: 9b8169a687fb7624592432573663d847,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1505,6 +1510,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7340358546238359000, guid: 9b8169a687fb7624592432573663d847,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b8169a687fb7624592432573663d847, type: 3}
