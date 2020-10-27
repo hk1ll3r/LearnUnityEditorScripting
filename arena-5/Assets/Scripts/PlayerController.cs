@@ -1,0 +1,103 @@
+﻿using UnityEngine;
+using System;
+using NoSuchStudio.Common;
+namespace NoSuchStudio.ExtendingEditor {
+
+    public enum SpecialAbilityType {
+        None = 1,
+        Dash = 2,
+        Bounce = 3,
+        Invisibility = 4
+    }
+
+    [Serializable]
+    public class SpecialAbility {
+        public SpecialAbilityType type;
+        public float duration;
+        [FloatDurationProperty(FloatDurationUnitsMode.Flexible)] public float cooldown;
+        public float power;
+    }
+
+    [DisallowMultipleComponent]
+    public class PlayerController : MonoBehaviour {
+        [Header("General")]
+        [SerializeField, Range(0.5f, 5f)] private float mass;
+        [SerializeField, Range(1f, 20f)] private float speed;
+        [SerializeField, Range(0.5f, 3f)] private float size;
+        [Space(10)]
+        [SerializeField] private SpecialAbility specialAbility;
+
+        [Header("Visual")]
+        [Tooltip("Color field takes effect at runtime")]
+        [SerializeField] private Color color;
+        [Tooltip("Texture field only takes effect at runtime")]
+        [SerializeField] private Texture texture;
+
+        private float lastAbilityTime; // last time the player used the special ability.
+        public float LastAbilityTime {
+            get { return lastAbilityTime; }
+        }
+
+        public SpecialAbility SpecialAbility {
+            get { return specialAbility; }
+        }
+
+        private void Start() {
+            ApplyValues();
+        }
+
+        private void OnValidate() {
+            ApplyValues();
+        }
+
+        private void ApplyValues() {
+            GetComponent<Rigidbody>().mass = mass;
+            transform.localScale = size * Vector3.one;
+            if (Application.isPlaying) {
+                GetComponent<MeshRenderer>().material.color = color;
+                GetComponent<MeshRenderer>().material.mainTexture = texture;
+            }
+        }
+
+        private void Die() {
+            // TODO die animation
+            Destroy(gameObject);
+        }
+
+        private void FixedUpdate() {
+            float inputX = Input.GetAxis("Horizontal");
+            float inputY = Input.GetAxis("Vertical");
+
+            Vector3 av = speed * new Vector3(inputX, 0f, inputY);
+            // Debug.Log($"input ({inputX}, {inputY})");
+
+            GetComponent<Rigidbody>().AddForce(av, ForceMode.Acceleration);
+
+            if (Input.GetButton("Fire1") && Time.time > lastAbilityTime + specialAbility?.cooldown) {
+                // TODO perform special ability
+                lastAbilityTime = Time.time;
+                switch (specialAbility.type) {
+                    case SpecialAbilityType.Dash:
+                        GetComponent<Rigidbody>().velocity = specialAbility.power * GetComponent<Rigidbody>().velocity;
+                        break;
+                    case SpecialAbilityType.Bounce:
+                        GetComponent<Rigidbody>().velocity = -specialAbility.power * GetComponent<Rigidbody>().velocity;
+                        break;
+                    case SpecialAbilityType.Invisibility:
+                        GetComponent<MeshRenderer>().enabled = false;
+                        this.RunDelayed(specialAbility.duration, () => {
+                            if (this != null) {
+                                GetComponent<MeshRenderer>().enabled = true;
+                            }
+                        });
+                        break;
+                }
+            }
+
+            if (transform.position.y < -2) {
+                Die();
+            }
+        }
+    }
+
+}
